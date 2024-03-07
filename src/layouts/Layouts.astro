@@ -1,0 +1,22 @@
+---
+import Link from "../components/Link.astro";
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Brata Darmawan</title>
+  </head>
+  <body>
+    <nav class="mb-2">
+      <Link link="/" content="Pergi ke Home" />
+      <Link link="/about" content="Pergi ke About" />
+      <Link link="/blog" content="Pergi ke Blog" />
+    </nav>
+    <slot />
+  </body>
+</html>
