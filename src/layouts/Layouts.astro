@@ -1,5 +1,7 @@
 ---
-import Link from "../components/Link.astro";
+import "../styles/global.css"
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
 const { title } = Astro.props;
 ---
 
@@ -12,11 +14,15 @@ const { title } = Astro.props;
     <title>{title} | Brata Darmawan</title>
   </head>
   <body>
-    <nav class="mb-2">
-      <Link link="/" content="Pergi ke Home" />
-      <Link link="/about" content="Pergi ke About" />
-      <Link link="/blog" content="Pergi ke Blog" />
+    <nav class="nav-links">
+      <Navigation link="/" content="Home" />
+      <Navigation link="/about" content="About" />
+      <Navigation link="/blog" content="Blog" />
     </nav>
     <slot />
+    <script>
+       import "../scripts/menu.js";
+    </script>
+    <Footer />
   </body>
 </html>
